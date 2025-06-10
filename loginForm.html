@@ -8,8 +8,22 @@
     <link rel="stylesheet" type="text/css" src="style.css">
 </head>
 <body>
+    <p>Welcome. Please log in</p>
+    <form>
+        <label for="usernameInput">Username</label><input type="text" id="usernameInput"/>
+        <br/>
+        <label for="passwordInput">Password</label><input type="text" id="passwordInput"/>
+        <br/>
+        <br/>
+        <a href="#">Log in</a>
+
+    </form>
 
     <script>
+
+        function verifyUser(){
+            var username = document.getElementById("usernameInput").value;
+        }
 
     </script>
 </body>
