@@ -10,10 +10,11 @@
     <p id="outputText"></p>
     
     <script>
-        function somefunction(){
-            var someVariable = 100;
+        var someVariable = 100; //Global variable, can be used outside and within function, it is not confined to a function
+        someFunction();
 
-
+        function someFunction(){
+            document.getElementById("outputText").innerHTML = someVariable
         }
 
     </script>
