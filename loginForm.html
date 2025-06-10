@@ -12,10 +12,11 @@
     <form>
         <label for="usernameInput">Username</label><input type="text" id="usernameInput"/>
         <br/>
-        <label for="passwordInput">Password</label><input type="text" id="passwordInput"/>
+        <label for="passwordInput">Password</label><input type="password" id="passwordInput"/>
+        <p id="message"></p>
         <br/>
         <br/>
-        <a href="#">Log in</a>
+        <a href="#" onclick="verifyUser()">Log in</a>
 
     </form>
 
@@ -23,7 +24,19 @@
 
         function verifyUser(){
             var username = document.getElementById("usernameInput").value;
-            var username = document.getElementById("passwordInput").value
+            var password = document.getElementById("passwordInput").value;
+
+            checkUserCreds(username, password);
+        }
+
+        function checkUserCreds(username, password){
+           var systemUsername ="Nkateko";
+           var systemPassword ="1234";
+
+           if(username == systemUsername && password == systemPassword){
+                document.getElementById("message").innerHTML = "Correct. Logging you in...";
+           }
+
         }
 
     </script>
