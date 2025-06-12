@@ -16,10 +16,21 @@
         <option value="snowy">Snowy</option>
         <option value="cloudy">Cloudy</option>   
     </select>
-    <a href="#">Go</a>
-    <p id="outputText">Weather advice</p>
+    <a href="#" onclick="btnPressed()">GO!</a>
+    <p id="outputText">Weather advice : </p>
 
     <script>
+        function btnPressed(){
+            var weatherSelected = document.getElementById("weather").value;
+            var advice;
+
+            switch(weatherSelected){
+                case "sunny":
+                    advice = "Wear you sunglasses";
+                    break;
+            }
+            document.getElementById("outputText").innerHTML = "Weather advice : " + advice;
+        }
 
     </script>
     
