@@ -8,9 +8,54 @@
     <link rel="stylesheet" type="text/css" src="style.css">
 </head>
 <body>
+    <p id="outputText"></p>
 
     <script>
-        
+
+      //Strings and Numbers part 1  
+      //  var text1 = "4"; //JavaScript does not recognize these as numbers, but as text
+      //  var text2 = "5";
+
+      //  document.getElementById("outputText").innerHTML = text1 + text2; //Whwn you put in the addition sign, JavaScript concatinates the string values
+
+      //var text1 = "10"
+      //var text2 = "2"
+
+      //Due to the fact that strings have no subtract opperation, JavaScript converts the strings given in the variables above in to numbers and performs the mathematical operation. This will work with multiplication and division as well. 
+      //document.getElementById("outputText").innerHTML = text1 - text2; //It is bad practice to let JavaScript figure out this for you, if you wand to deal with number, make it clear when you define the variable to JavaScript that it is a number usning the proper syntex
+
+
+      //Converting string to number
+      //var text1 = "10";
+      //var text2 = "2";
+
+      //var num1 = stringToNumber(text1);
+      //var num2 = stringToNumber(text2);
+
+      //document.getElementById("outputText").innerHTML = num1 * num2;
+
+      //function stringToNumber(text){
+      //  return parseInt(text);
+      //}
+
+
+      //Avoiding conversion Errors
+      var text1 = "ten";
+      var text2 = "2";
+
+      var num1 = stringToNumber(text1);
+      var num2 = stringToNumber(text2);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById("outputText").innerHTML = "You have not entered a valid number. Please try again."
+      } else {
+        document.getElementById("outputText").innerHTML = num1 * num2;
+      }
+
+      function stringToNumber(text){
+        return parseInt(text);
+      }
+
     </script>
     
 </body>
